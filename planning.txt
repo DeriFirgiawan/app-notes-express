@@ -1,0 +1,42 @@
+App Notes Express
+
+# Framework/Library :
+-> Express => Web Server
+-> EJS     => Template View Engine
+-> MongoDB => Databases
+
+# Status Code
+* 201 -> Created
+* 200 -> OK
+* 400 -> Bad Request
+* 404 -> Not Found
+* 500 -> Server Error
+
+# Method
+-> GET
+-> POST
+-> PUT
+-> DELETE
+
+# Fitur ( CRUD )
+-> createNotes
+   Method : POST
+   Status Code: 201
+   req: {
+     id: "21212fdef",
+     title: "My Notes",
+     author: "Jhony",
+     date: "2021-04-2",
+     body: "Lorem ipsum",
+     updatedAt: "2021-04-6"
+   }
+   
+   * Success Response
+   res: {
+     status: "success",
+     message: "Success add Notes",
+   }
+
+-> getNotes
+-> updateNotes
+-> Delete Notes

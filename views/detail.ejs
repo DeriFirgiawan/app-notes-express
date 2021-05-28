@@ -1,0 +1,16 @@
+<%- include('./header/index.ejs'); %>
+<h1>Detail Note</h1>
+
+<div class="card">
+  <div class="card-body">
+    <h4><%= detailNoteId.title %></h4>
+    <hr>
+    <span>
+      <%= detailNoteId.createdAt %>
+    </span>
+    <br>
+    <span><%= detailNoteId.author %></span>
+    <h5 class="mt-4"><%= detailNoteId.body %></h5>
+  </div>
+</div>
+<%- include('./footer/index.ejs'); %>

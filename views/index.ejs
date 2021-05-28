@@ -1,0 +1,22 @@
+<%- include('./header/index.ejs'); %>
+<% if (allNote !== '') { %>
+  <div class="main-content d-flex flex-wrap flex-row-reverse justify-content-around">
+    <% allNote.map(result => { %>
+      <div class="card shadow" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= result.title %></h5>
+          <small class="card-subtitle mb-2 text-muted"><%= result.author %></small>
+          <p class="card-text mt-4"><%= result.body %></p>
+          <a href="/detail-note/<%= result.id %>" class="card-link text-success">Detail</a>
+          <form action="/<%= result.id %>" method="delete">
+            <button class="btn btn-danger" type="submit" name="button">Delete</button>
+          </form>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+<% } else { %>
+  <h1>Belum Ada Notes</h1>
+<% } %>
+<%- include('./footer/index.ejs'); %>
